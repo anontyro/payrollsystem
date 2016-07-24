@@ -15,12 +15,14 @@ import java.util.*;
  */
 public abstract class Employee {
     private static Map<String, String>employeeList = new HashMap<>();
-    private String empId;
+    private int empId;
     private String name;
     private String vehicle;
     
-    public Employee(){
-        
+    public Employee(int empId, String name, String vehicle){
+        this.empId = empId;
+        this.name = name;
+        this.vehicle = name;
     }
     
     public String genEmpId(){
@@ -33,14 +35,14 @@ public abstract class Employee {
     /**
      * @return the empId
      */
-    public String getEmpId() {
+    public int getEmpId() {
         return empId;
     }
 
     /**
      * @param empId the empId to set
      */
-    public void setEmpId(String empId) {
+    public void setEmpId(int empId) {
         this.empId = empId;
     }
 
@@ -71,6 +73,8 @@ public abstract class Employee {
     public void setVehicle(String vehicle) {
         this.vehicle = vehicle;
     }
+    
+    public abstract double calculatePay();
     
     
     
