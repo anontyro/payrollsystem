@@ -87,6 +87,8 @@ public abstract class Employee {
         this.vehicle = vehicle;
     }
     
+    public abstract double calculatePay();
+    
     
     
     
