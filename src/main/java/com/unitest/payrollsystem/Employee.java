@@ -15,12 +15,25 @@ import java.util.*;
  */
 public abstract class Employee {
     private static Map<String, String>employeeList = new HashMap<>();
-    private String empId;
+    private int empId;
     private String name;
-    private String vehicle;
+    private Vehicle vehicle;
     
     public Employee(){
-        
+        empId = 0;
+        name ="";
+    }
+    
+    public Employee(int empId, String name, Vehicle pV){
+        this.empId = empId;
+        this.name = name;
+        this.vehicle = pV;
+    }
+    
+    public Employee(int empId, String name, String plate, String colour){
+        this.empId = empId;
+        this.name = name;
+        this.vehicle = new Vehicle(plate, colour);
     }
     
     public String genEmpId(){
@@ -29,18 +42,20 @@ public abstract class Employee {
         return new BigInteger(50, rand).toString(32);
     }
     
+    public abstract double calculatePay();
+    
 
     /**
      * @return the empId
      */
-    public String getEmpId() {
+    public int getEmpId() {
         return empId;
     }
 
     /**
      * @param empId the empId to set
      */
-    public void setEmpId(String empId) {
+    public void setEmpId(int empId) {
         this.empId = empId;
     }
 
@@ -61,14 +76,14 @@ public abstract class Employee {
     /**
      * @return the vehicle
      */
-    public String getVehicle() {
+    public Vehicle getVehicle() {
         return vehicle;
     }
 
     /**
      * @param vehicle the vehicle to set
      */
-    public void setVehicle(String vehicle) {
+    public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
     

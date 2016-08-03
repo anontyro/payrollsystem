@@ -14,5 +14,14 @@ public class FullTime extends Employee{
     public FullTime(){
         
     }
+
+    FullTime(int id, String name, double sal, double hourAndHalf, Vehicle vehicle) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double calculatePay() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

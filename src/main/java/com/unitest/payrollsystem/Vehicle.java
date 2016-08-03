@@ -10,5 +10,9 @@ package com.unitest.payrollsystem;
  * @author Alex
  */
 public class Vehicle {
+
+    Vehicle(String plate, String colour) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
